@@ -19,33 +19,60 @@ html{
 
 body{
   font-family:Arial, sans-serif;
-  background:#0b1020;
-  color:white;
+  background:#081120;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  width:500px;
+  height:500px;
+  background:#6c63ff;
+  filter:blur(180px);
+  opacity:.18;
+  top:-200px;
+  left:-200px;
+  z-index:-1;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  width:450px;
+  height:450px;
+  background:#00d4ff;
+  filter:blur(180px);
+  opacity:.12;
+  bottom:-200px;
+  right:-200px;
+  z-index:-1;
 }
 
 /* NAVBAR */
 nav{
   position:fixed;
-  width:100%;
   top:0;
-  left:0;
-  padding:18px 8%;
+  width:100%;
+  z-index:1000;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(11,16,32,.9);
-  backdrop-filter:blur(10px);
-  z-index:1000;
+  padding:18px 9%;
+  background:rgba(8,17,32,.85);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
-  font-size:24px;
-  font-weight:bold;
-  color:#fff;
+  font-size:25px;
+  font-weight:700;
 }
 
 .logo span{
-  color:#7c3aed;
+  color:#00d4ff;
 }
 
 nav ul{
@@ -54,14 +81,15 @@ nav ul{
   gap:22px;
 }
 
-nav ul li a{
-  color:white;
+nav a{
+  color:#cbd5e1;
   text-decoration:none;
-  font-size:15px;
+  font-size:14px;
+  transition:.3s;
 }
 
-nav ul li a:hover{
-  color:#a78bfa;
+nav a:hover{
+  color:#00d4ff;
 }
 
 /* HERO */
@@ -69,56 +97,52 @@ nav ul li a:hover{
   min-height:100vh;
   display:flex;
   align-items:center;
-  padding:120px 10% 60px;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  width:350px;
-  height:350px;
-  background:#7c3aed;
-  filter:blur(150px);
-  opacity:.35;
-  top:80px;
-  right:-80px;
+  justify-content:center;
+  padding:120px 10% 70px;
 }
 
 .hero-content{
-  max-width:700px;
-  position:relative;
-  z-index:2;
+  max-width:850px;
+  text-align:center;
 }
 
-.tag{
-  color:#a78bfa;
-  font-size:16px;
-  margin-bottom:15px;
+.badge{
+  display:inline-block;
+  padding:10px 18px;
+  border:1px solid rgba(0,212,255,.3);
+  background:rgba(0,212,255,.08);
+  color:#00d4ff;
+  border-radius:30px;
+  margin-bottom:25px;
+  font-size:14px;
 }
 
 .hero h1{
-  font-size:60px;
-  line-height:1.1;
-  margin-bottom:20px;
+  font-size:clamp(45px,8vw,85px);
+  line-height:1.05;
+  margin-bottom:22px;
 }
 
-.hero h1 span{
-  color:#a78bfa;
+.gradient-text{
+  background:linear-gradient(90deg,#00d4ff,#7c3aed,#ec4899);
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
 .hero p{
-  color:#b8c0d9;
+  max-width:650px;
+  margin:auto;
+  color:#94a3b8;
   font-size:18px;
   line-height:1.7;
-  max-width:600px;
 }
 
-.buttons{
-  margin-top:30px;
+.hero-buttons{
+  margin-top:35px;
   display:flex;
+  justify-content:center;
   gap:15px;
+  flex-wrap:wrap;
 }
 
 .btn{
@@ -129,24 +153,24 @@ nav ul li a:hover{
   transition:.3s;
 }
 
-.primary{
-  background:#7c3aed;
+.btn-primary{
+  background:linear-gradient(90deg,#00d4ff,#6c63ff);
   color:white;
 }
 
-.primary:hover{
-  transform:translateY(-3px);
-  background:#6d28d9;
+.btn-primary:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 30px rgba(0,212,255,.25);
 }
 
-.secondary{
-  border:1px solid #7c3aed;
-  color:#c4b5fd;
-}
-
-.secondary:hover{
-  background:#7c3aed;
+.btn-outline{
+  border:1px solid rgba(255,255,255,.2);
   color:white;
+}
+
+.btn-outline:hover{
+  border-color:#00d4ff;
+  color:#00d4ff;
 }
 
 /* SECTION */
@@ -156,151 +180,185 @@ section{
 
 .section-title{
   text-align:center;
-  font-size:35px;
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.section-subtitle{
+  text-align:center;
+  color:#64748b;
   margin-bottom:50px;
 }
 
-.section-title span{
-  color:#a78bfa;
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:30px;
+  align-items:center;
 }
 
-/* ABOUT */
-.about-box{
-  background:#121a31;
-  border:1px solid #242e4d;
-  border-radius:20px;
+.profile-box{
+  min-height:250px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:90px;
+  border-radius:25px;
+  background:linear-gradient(135deg,rgba(0,212,255,.15),rgba(124,58,237,.2));
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.about-card{
   padding:35px;
+  background:rgba(18,30,50,.7);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:25px;
+}
+
+.about-card p{
+  color:#a8b3c7;
   line-height:1.8;
-  color:#b8c0d9;
+  margin-bottom:15px;
 }
 
 /* SKILLS */
 .skills-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:18px;
 }
 
 .skill-card{
-  background:#121a31;
-  border:1px solid #242e4d;
-  padding:25px 15px;
+  padding:28px 15px;
   text-align:center;
-  border-radius:15px;
+  background:rgba(18,30,50,.75);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
   transition:.3s;
 }
 
 .skill-card:hover{
   transform:translateY(-8px);
-  border-color:#7c3aed;
+  border-color:#00d4ff;
+  box-shadow:0 15px 35px rgba(0,212,255,.1);
 }
 
 .skill-icon{
-  font-size:32px;
-  margin-bottom:10px;
+  font-size:35px;
+  margin-bottom:12px;
 }
 
 /* PROJECTS */
 .projects-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:25px;
 }
 
 .project-card{
-  background:#121a31;
-  border:1px solid #242e4d;
-  border-radius:20px;
-  padding:28px;
-  transition:.3s;
+  padding:30px;
+  background:linear-gradient(145deg,rgba(18,30,50,.9),rgba(12,20,35,.8));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:22px;
+  transition:.35s;
 }
 
 .project-card:hover{
-  transform:translateY(-8px);
+  transform:translateY(-10px);
   border-color:#7c3aed;
 }
 
+.project-number{
+  color:#00d4ff;
+  font-size:13px;
+  font-weight:bold;
+}
+
 .project-card h3{
-  color:#c4b5fd;
-  margin-bottom:15px;
+  font-size:23px;
+  margin:15px 0;
 }
 
 .project-card p{
-  color:#aeb7cf;
-  line-height:1.6;
+  color:#94a3b8;
+  line-height:1.7;
 }
 
-.project-tag{
+.tags{
+  margin-top:20px;
+}
+
+.tag{
   display:inline-block;
-  margin-top:18px;
-  color:#a78bfa;
-  font-size:13px;
+  padding:6px 10px;
+  background:rgba(0,212,255,.08);
+  color:#00d4ff;
+  border-radius:20px;
+  font-size:12px;
+  margin:3px;
 }
 
 /* CONTACT */
-.contact-box{
+.contact-card{
   text-align:center;
-  background:linear-gradient(135deg,#6d28d9,#312e81);
-  padding:50px 25px;
-  border-radius:25px;
+  padding:65px 25px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#121e32,#20104a);
+  border:1px solid rgba(255,255,255,.1);
 }
 
-.contact-box h2{
-  font-size:35px;
+.contact-card h2{
+  font-size:42px;
   margin-bottom:15px;
 }
 
-.contact-box p{
-  color:#e0e7ff;
-  margin-bottom:25px;
+.contact-card p{
+  color:#94a3b8;
+  margin-bottom:30px;
 }
 
 /* FOOTER */
 footer{
+  padding:30px;
   text-align:center;
-  padding:25px;
-  color:#8d96ad;
-  border-top:1px solid #242e4d;
+  color:#64748b;
+  border-top:1px solid rgba(255,255,255,.08);
 }
 
 /* MOBILE */
-@media(max-width:650px){
+@media(max-width:700px){
 
   nav{
     padding:15px 5%;
   }
 
   nav ul{
-    gap:10px;
+    gap:12px;
   }
 
-  nav ul li a{
+  nav a{
     font-size:12px;
-  }
-
-  .hero{
-    padding:120px 7% 60px;
-  }
-
-  .hero h1{
-    font-size:42px;
-  }
-
-  .hero p{
-    font-size:16px;
   }
 
   section{
     padding:70px 7%;
   }
 
-  .buttons{
-    flex-direction:column;
-    align-items:flex-start;
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero p{
+    font-size:16px;
   }
 
   .section-title{
-    font-size:30px;
+    font-size:32px;
+  }
+
+  .contact-card h2{
+    font-size:32px;
   }
 }
 </style>
@@ -308,14 +366,15 @@ footer{
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVIGATION -->
 <nav>
-  <div class="logo">Nend<span>hara</span></div>
+  <div class="logo">Nend<span>hara.</span></div>
 
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -324,22 +383,20 @@ footer{
 
   <div class="hero-content">
 
-    <div class="tag">👋 HELLO, I'M</div>
+    <div class="badge">👋 Welcome to my portfolio</div>
 
     <h1>
-      Nendhara<br>
-      <span>Computer Science Engineer</span>
+      Hi, I'm <span class="gradient-text">Nendhara</span>
     </h1>
 
     <p>
-      Passionate about web development, programming and building
-      creative technology projects. I love learning new skills and
-      turning ideas into useful digital solutions.
+      A Computer Science Engineering student passionate about
+      technology, web development and creating innovative digital solutions.
     </p>
 
-    <div class="buttons">
-      <a href="#projects" class="btn primary">View My Work 🚀</a>
-      <a href="#contact" class="btn secondary">Contact Me</a>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">Explore My Work 🚀</a>
+      <a href="#contact" class="btn btn-outline">Let's Connect ✨</a>
     </div>
 
   </div>
@@ -349,22 +406,32 @@ footer{
 <!-- ABOUT -->
 <section id="about">
 
-  <h2 class="section-title">About <span>Me</span></h2>
+  <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+  <p class="section-subtitle">Get to know me better</p>
 
-  <div class="about-box">
-    <p>
-      I am a Computer Science Engineering student passionate about
-      technology and software development. I enjoy creating modern
-      websites and working on innovative projects that solve real-world
-      problems.
-    </p>
+  <div class="about-grid">
 
-    <br>
+    <div class="profile-box">👩‍💻</div>
 
-    <p>
-      My goal is to continuously improve my technical skills and become
-      a successful software developer.
-    </p>
+    <div class="about-card">
+
+      <p>
+        I am a Computer Science Engineering student with a strong interest
+        in software development and modern technologies.
+      </p>
+
+      <p>
+        I enjoy building creative websites, learning programming languages
+        and developing projects that solve real-world problems.
+      </p>
+
+      <p>
+        My goal is to grow as a developer and continuously explore
+        new technologies.
+      </p>
+
+    </div>
+
   </div>
 
 </section>
@@ -372,44 +439,18 @@ footer{
 <!-- SKILLS -->
 <section id="skills">
 
-  <h2 class="section-title">My <span>Skills</span></h2>
+  <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+  <p class="section-subtitle">Technologies I am learning and working with</p>
 
   <div class="skills-grid">
 
-    <div class="skill-card">
-      <div class="skill-icon">🌐</div>
-      HTML
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon">🎨</div>
-      CSS
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon">⚡</div>
-      JavaScript
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon">🐍</div>
-      Python
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon">☕</div>
-      Java
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon">💻</div>
-      C Programming
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon">🐙</div>
-      GitHub
-    </div>
+    <div class="skill-card"><div class="skill-icon">🌐</div>HTML</div>
+    <div class="skill-card"><div class="skill-icon">🎨</div>CSS</div>
+    <div class="skill-card"><div class="skill-icon">⚡</div>JavaScript</div>
+    <div class="skill-card"><div class="skill-icon">🐍</div>Python</div>
+    <div class="skill-card"><div class="skill-icon">☕</div>Java</div>
+    <div class="skill-card"><div class="skill-icon">💻</div>C Programming</div>
+    <div class="skill-card"><div class="skill-icon">🐙</div>GitHub</div>
 
   </div>
 
@@ -418,46 +459,63 @@ footer{
 <!-- PROJECTS -->
 <section id="projects">
 
-  <h2 class="section-title">Featured <span>Projects</span></h2>
+  <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+  <p class="section-subtitle">Some projects I have worked on</p>
 
   <div class="projects-grid">
 
     <div class="project-card">
 
+      <div class="project-number">PROJECT 01</div>
+
       <h3>🩸 LifeLink</h3>
 
       <p>
         A smart blood finder platform designed to connect blood donors
-        with people who need blood quickly and efficiently.
+        and people who need blood quickly and efficiently.
       </p>
 
-      <div class="project-tag">HTML • CSS • JavaScript</div>
+      <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
 
     </div>
 
     <div class="project-card">
+
+      <div class="project-number">PROJECT 02</div>
 
       <h3>🤖 CareerPilot AI</h3>
 
       <p>
-        A smart interview and placement preparation platform featuring
-        aptitude, coding and HR interview practice.
+        A smart interview and placement preparation platform for aptitude,
+        coding and HR interview practice.
       </p>
 
-      <div class="project-tag">Web Development • AI Concept</div>
+      <div class="tags">
+        <span class="tag">Web Development</span>
+        <span class="tag">AI Concept</span>
+      </div>
 
     </div>
 
     <div class="project-card">
 
-      <h3>🤟 Sign Language Project</h3>
+      <div class="project-number">PROJECT 03</div>
+
+      <h3>🤟 Sign Language Recognition</h3>
 
       <p>
-        A technology project focused on recognizing sign language using
-        computer vision and machine learning concepts.
+        A technology-based project focused on recognizing sign language
+        using computer vision concepts.
       </p>
 
-      <div class="project-tag">Python • Computer Vision</div>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Computer Vision</span>
+      </div>
 
     </div>
 
@@ -468,16 +526,17 @@ footer{
 <!-- CONTACT -->
 <section id="contact">
 
-  <div class="contact-box">
+  <div class="contact-card">
 
-    <h2>Let's Connect! 🚀</h2>
+    <h2>Let's Build Something Amazing 🚀</h2>
 
     <p>
-      Interested in working together or connecting with me?
+      Feel free to connect with me and explore my projects.
     </p>
 
-    <a href="https://github.com/nendharacse" class="btn secondary">
-      Visit My GitHub 🐙
+    <a href="https://github.com/nendharacse"
+       class="btn btn-primary">
+       Visit My GitHub 🐙
     </a>
 
   </div>
@@ -486,7 +545,7 @@ footer{
 
 <!-- FOOTER -->
 <footer>
-  © 2026 Nendhara • Built with ❤️ and GitHub Pages
+  © 2026 Nendhara • Designed & Built with ❤️
 </footer>
 
 </body>
