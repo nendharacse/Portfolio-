@@ -1275,3 +1275,130 @@ footer {
     }
 
    }
+/* =========================================
+   MOBILE SCREEN OVERFLOW FIX
+========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* அனைத்து elements phone screen குள்ளே இருக்க */
+
+* {
+    max-width: 100%;
+}
+
+
+/* NAVIGATION FIX */
+
+.navbar {
+    width: 100%;
+    max-width: 100%;
+}
+
+.nav-links {
+    flex-wrap: wrap;
+}
+
+
+/* HERO FIX */
+
+.hero,
+.hero-container,
+.hero-content {
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero h1 {
+    word-wrap: break-word;
+}
+
+
+/* PROFILE FIX */
+
+.hero-image,
+.hero-profile {
+    max-width: 100%;
+}
+
+.image-bg {
+    max-width: 90vw;
+    max-height: 90vw;
+}
+
+
+/* GRID FIX */
+
+.skills-grid,
+.projects-grid,
+.achievements-grid,
+.contact-grid,
+.info-grid,
+.experience-grid {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    /* Navigation small & inside screen */
+
+    .nav-links {
+        gap: 2px;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+        padding: 7px 6px;
+    }
+
+    /* Hero */
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    /* Profile */
+
+    .image-bg {
+        width: 280px;
+        height: 280px;
+    }
+
+    .photo-placeholder {
+        width: 250px;
+        padding: 40px 15px;
+    }
+
+    /* Cards */
+
+    .project-card,
+    .achievement-card,
+    .skill-card,
+    .info-card {
+        width: 100%;
+    }
+
+}
