@@ -4,326 +4,489 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nendhara Kumar | Portfolio</title>
+<title>Nendhara K | Portfolio</title>
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial, sans-serif;
-  background:#07111f;
-  color:#fff;
+    font-family:Arial, sans-serif;
+    background:#f7f9fc;
+    color:#172033;
+    line-height:1.6;
 }
 
 /* NAVBAR */
 nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  padding:18px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(7,17,31,.95);
-  backdrop-filter:blur(10px);
-  z-index:1000;
-  border-bottom:1px solid #1d2a3a;
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #e5e7eb;
+    z-index:1000;
+    padding:16px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo{
-  font-size:24px;
-  font-weight:bold;
+    font-size:24px;
+    font-weight:800;
+    color:#111827;
 }
 
 .logo span{
-  color:#38bdf8;
+    color:#2563eb;
 }
 
 nav ul{
-  display:flex;
-  list-style:none;
-  gap:20px;
+    display:flex;
+    list-style:none;
+    gap:22px;
 }
 
 nav a{
-  color:#cbd5e1;
-  text-decoration:none;
-  font-size:14px;
+    text-decoration:none;
+    color:#475569;
+    font-size:14px;
+    font-weight:600;
 }
 
 nav a:hover{
-  color:#38bdf8;
+    color:#2563eb;
 }
 
 /* HERO */
 .hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:120px 8% 60px;
+    min-height:100vh;
+    padding:130px 10% 70px;
+    display:flex;
+    align-items:center;
+    background:
+        radial-gradient(circle at 85% 20%, #dbeafe 0, transparent 28%),
+        radial-gradient(circle at 10% 80%, #e0e7ff 0, transparent 25%),
+        #f8fafc;
 }
 
 .hero-container{
-  max-width:1000px;
-  display:grid;
-  grid-template-columns:1fr 1.3fr;
-  gap:60px;
-  align-items:center;
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.5fr .8fr;
+    gap:60px;
+    align-items:center;
 }
 
-/* TEMP PROFILE */
-.profile{
-  width:260px;
-  height:260px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:110px;
-  background:linear-gradient(135deg,#0ea5e9,#6366f1);
-  box-shadow:0 0 50px rgba(56,189,248,.25);
-  border:6px solid rgba(255,255,255,.08);
-}
-
-.badge{
-  color:#38bdf8;
-  margin-bottom:15px;
-  font-weight:bold;
+.hero-tag{
+    display:inline-block;
+    background:#dbeafe;
+    color:#2563eb;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
 .hero h1{
-  font-size:55px;
-  margin-bottom:15px;
+    font-size:64px;
+    line-height:1.05;
+    margin-bottom:15px;
+    color:#0f172a;
 }
 
 .hero h1 span{
-  color:#38bdf8;
+    color:#2563eb;
 }
 
-.hero p{
-  color:#94a3b8;
-  line-height:1.8;
-  font-size:17px;
+.hero-role{
+    font-size:20px;
+    font-weight:600;
+    color:#475569;
+    margin-bottom:20px;
 }
 
-.buttons{
-  display:flex;
-  gap:15px;
-  margin-top:28px;
-  flex-wrap:wrap;
+.hero-text{
+    color:#64748b;
+    max-width:650px;
+    font-size:16px;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
 }
 
 .btn{
-  padding:13px 22px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
+    padding:13px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.25s;
+    display:inline-block;
 }
 
-.primary{
-  background:#38bdf8;
-  color:#07111f;
+.btn-primary{
+    background:#2563eb;
+    color:white;
 }
 
-.secondary{
-  border:1px solid #38bdf8;
-  color:#38bdf8;
+.btn-primary:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
 }
 
-.btn:hover{
-  transform:translateY(-3px);
+.btn-outline{
+    border:1px solid #cbd5e1;
+    color:#334155;
+    background:white;
+}
+
+.btn-outline:hover{
+    border-color:#2563eb;
+    color:#2563eb;
+}
+
+.profile-card{
+    width:280px;
+    height:320px;
+    margin:auto;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    border-radius:30px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    box-shadow:0 25px 60px rgba(37,99,235,.25);
+}
+
+.profile-card .icon{
+    width:120px;
+    height:120px;
+    background:white;
+    color:#2563eb;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:55px;
+    margin-bottom:18px;
+}
+
+.profile-card p{
+    font-size:14px;
+    opacity:.9;
 }
 
 /* SECTIONS */
 section{
-  padding:90px 10%;
+    padding:90px 10%;
 }
 
-.title{
-  text-align:center;
-  font-size:38px;
-  margin-bottom:15px;
+.container{
+    max-width:1100px;
+    margin:auto;
 }
 
-.title span{
-  color:#38bdf8;
+.section-label{
+    color:#2563eb;
+    font-weight:bold;
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
 }
 
-.subtitle{
-  text-align:center;
-  color:#64748b;
-  margin-bottom:45px;
+.section-title{
+    font-size:38px;
+    margin:8px 0 15px;
+    color:#0f172a;
+}
+
+.section-text{
+    color:#64748b;
+    max-width:700px;
 }
 
 /* ABOUT */
-.about-box{
-  max-width:850px;
-  margin:auto;
-  background:#101c2c;
-  padding:35px;
-  border-radius:18px;
-  border:1px solid #1e293b;
-  color:#cbd5e1;
-  line-height:1.8;
+.about-card{
+    margin-top:35px;
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    border:1px solid #e2e8f0;
+    color:#475569;
 }
 
 /* SKILLS */
-.skills{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:18px;
+.skills-grid{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
 }
 
-.skill{
-  background:#101c2c;
-  padding:25px;
-  text-align:center;
-  border-radius:15px;
-  border:1px solid #1e293b;
-  transition:.3s;
+.skill-category{
+    background:white;
+    padding:25px;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    transition:.25s;
 }
 
-.skill:hover{
-  transform:translateY(-7px);
-  border-color:#38bdf8;
+.skill-category:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(15,23,42,.08);
 }
 
-.skill-icon{
-  font-size:32px;
-  margin-bottom:10px;
+.skill-category h3{
+    color:#2563eb;
+    margin-bottom:12px;
+}
+
+.skill-category p{
+    color:#64748b;
+    font-size:14px;
 }
 
 /* PROJECTS */
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+.projects-grid{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:22px;
 }
 
-.project{
-  background:#101c2c;
-  padding:30px;
-  border-radius:18px;
-  border:1px solid #1e293b;
-  transition:.3s;
+.project-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    border:1px solid #e2e8f0;
+    transition:.3s;
 }
 
-.project:hover{
-  transform:translateY(-8px);
-  border-color:#38bdf8;
+.project-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 40px rgba(15,23,42,.09);
 }
 
-.project h3{
-  color:#38bdf8;
-  margin-bottom:15px;
+.project-icon{
+    font-size:35px;
+    margin-bottom:15px;
 }
 
-.project p{
-  color:#94a3b8;
-  line-height:1.7;
+.project-card h3{
+    color:#0f172a;
+    margin-bottom:12px;
+}
+
+.project-card p{
+    color:#64748b;
+    font-size:14px;
+}
+
+.tech{
+    margin-top:18px;
+}
+
+.tech span{
+    display:inline-block;
+    background:#eff6ff;
+    color:#2563eb;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+    margin:3px;
+}
+
+/* EDUCATION */
+.timeline{
+    margin-top:35px;
+    border-left:3px solid #2563eb;
+    padding-left:30px;
+}
+
+.timeline-item{
+    position:relative;
+    margin-bottom:30px;
+}
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    width:14px;
+    height:14px;
+    background:#2563eb;
+    border-radius:50%;
+    left:-38px;
+    top:7px;
+}
+
+.timeline-item h3{
+    color:#0f172a;
+}
+
+.timeline-item p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* ACHIEVEMENTS */
+.achievement-grid{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:18px;
+}
+
+.achievement{
+    background:white;
+    padding:23px;
+    border-radius:15px;
+    border:1px solid #e2e8f0;
+}
+
+.achievement .emoji{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.achievement h4{
+    color:#0f172a;
+    margin-bottom:7px;
+}
+
+.achievement p{
+    color:#64748b;
+    font-size:13px;
 }
 
 /* CONTACT */
-.contact{
-  max-width:850px;
-  margin:auto;
-  background:#101c2c;
-  padding:40px;
-  border-radius:20px;
-  border:1px solid #1e293b;
+.contact-box{
+    margin-top:35px;
+    background:#0f172a;
+    color:white;
+    padding:45px;
+    border-radius:22px;
+}
+
+.contact-box h2{
+    font-size:32px;
+}
+
+.contact-box > p{
+    color:#cbd5e1;
+    margin-top:10px;
 }
 
 .contact-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
-  margin-top:25px;
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:15px;
 }
 
-.contact-card{
-  background:#162337;
-  padding:20px;
-  border-radius:12px;
-  text-align:center;
+.contact-item{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
 }
 
-.contact-card h4{
-  color:#38bdf8;
-  margin-bottom:8px;
+.contact-item strong{
+    display:block;
+    color:#93c5fd;
+    margin-bottom:7px;
 }
 
-.contact-card a{
-  color:#cbd5e1;
-  text-decoration:none;
-  word-break:break-word;
+.contact-item a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    word-break:break-word;
 }
 
-.social-buttons{
-  text-align:center;
-  margin-top:30px;
-}
-
-.social-buttons a{
-  display:inline-block;
-  margin:8px;
+.social-links{
+    margin-top:25px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
 /* FOOTER */
 footer{
-  text-align:center;
-  padding:25px;
-  border-top:1px solid #1e293b;
-  color:#64748b;
+    text-align:center;
+    padding:25px;
+    color:#64748b;
+    background:white;
+    border-top:1px solid #e2e8f0;
 }
 
 /* MOBILE */
-@media(max-width:700px){
+@media(max-width:750px){
 
-  nav{
-    padding:15px 5%;
-  }
+    nav{
+        padding:15px 5%;
+    }
 
-  nav ul{
-    gap:10px;
-  }
+    .logo{
+        font-size:19px;
+    }
 
-  nav ul li a{
-    font-size:11px;
-  }
+    nav ul{
+        gap:10px;
+    }
 
-  .hero-container{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+    nav ul li a{
+        font-size:11px;
+    }
 
-  .profile{
-    margin:auto;
-    width:210px;
-    height:210px;
-    font-size:90px;
-  }
+    .hero{
+        padding:120px 7% 70px;
+    }
 
-  .hero h1{
-    font-size:42px;
-  }
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:40px;
+    }
 
-  .buttons{
-    justify-content:center;
-  }
+    .hero h1{
+        font-size:46px;
+    }
 
-  section{
-    padding:70px 7%;
-  }
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .profile-card{
+        order:-1;
+        width:220px;
+        height:250px;
+    }
+
+    section{
+        padding:70px 7%;
+    }
+
+    .section-title{
+        font-size:31px;
+    }
+
+    .contact-box{
+        padding:30px 20px;
+    }
 }
 </style>
 </head>
@@ -331,198 +494,287 @@ footer{
 <body>
 
 <nav>
-  <div class="logo">Nend<span>hara.</span></div>
+    <div class="logo">Nend<span>hara.</span></div>
 
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
+    <div class="hero-container">
 
-  <div class="hero-container">
+        <div>
+            <div class="hero-tag">AVAILABLE FOR OPPORTUNITIES</div>
 
-    <div class="profile">👩‍💻</div>
+            <h1>Hi, I'm <span>Nendhara K</span></h1>
 
-    <div>
+            <div class="hero-role">
+                Computer Science Engineering Student
+            </div>
 
-      <div class="badge">👋 COMPUTER SCIENCE ENGINEERING STUDENT</div>
+            <p class="hero-text">
+                Passionate about programming, web development and software
+                development. I enjoy learning new technologies and building
+                practical solutions to real-world problems.
+            </p>
 
-      <h1>
-        Hi, I'm<br>
-        <span>Nendhara Kumar</span>
-      </h1>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="mailto:nendharacse@gmail.com" class="btn btn-outline">
+                    Contact Me
+                </a>
+            </div>
+        </div>
 
-      <p>
-        A passionate Computer Science Engineering student interested in
-        web development, programming and building innovative technology
-        solutions.
-      </p>
-
-      <div class="buttons">
-        <a href="#projects" class="btn primary">View My Projects 🚀</a>
-
-        <a href="mailto:nendharacse@gmail.com"
-           class="btn secondary">Contact Me ✉️</a>
-      </div>
+        <!-- PHOTO CAN BE ADDED HERE LATER -->
+        <div class="profile-card">
+            <div class="icon">👩‍💻</div>
+            <h2>Nendhara K</h2>
+            <p>CSE Student • Developer</p>
+        </div>
 
     </div>
-
-  </div>
-
 </section>
 
-<!-- ABOUT -->
 <section id="about">
+<div class="container">
 
-  <h2 class="title">About <span>Me</span></h2>
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Building skills. Creating solutions.</h2>
 
-  <p class="subtitle">A little introduction about myself</p>
+    <p class="section-text">
+        A motivated Computer Science and Engineering student with knowledge
+        of programming, databases and software development.
+    </p>
 
-  <div class="about-box">
-    I am a Computer Science Engineering student passionate about
-    technology and software development. I enjoy learning programming
-    languages, creating modern websites and working on innovative projects.
+    <div class="about-card">
+        I am passionate about learning new technologies and improving my
+        technical and problem-solving skills. My goal is to begin my career
+        in software engineering and contribute to meaningful technology
+        solutions while continuously growing as a developer.
+    </div>
 
-    <br><br>
-
-    My goal is to continuously improve my technical skills and grow as
-    a professional software developer.
-  </div>
-
+</div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
+<div class="container">
 
-  <h2 class="title">My <span>Skills</span></h2>
+    <div class="section-label">Technical Skills</div>
+    <h2 class="section-title">My Skills & Technologies</h2>
 
-  <p class="subtitle">Technologies I work with</p>
+    <div class="skills-grid">
 
-  <div class="skills">
+        <div class="skill-category">
+            <h3>💻 Programming</h3>
+            <p>Python, C</p>
+        </div>
 
-    <div class="skill"><div class="skill-icon">🌐</div>HTML</div>
-    <div class="skill"><div class="skill-icon">🎨</div>CSS</div>
-    <div class="skill"><div class="skill-icon">⚡</div>JavaScript</div>
-    <div class="skill"><div class="skill-icon">🐍</div>Python</div>
-    <div class="skill"><div class="skill-icon">💻</div>C Programming</div>
-    <div class="skill"><div class="skill-icon">🐙</div>GitHub</div>
+        <div class="skill-category">
+            <h3>🌐 Web Technologies</h3>
+            <p>HTML, CSS, JavaScript</p>
+        </div>
 
-  </div>
+        <div class="skill-category">
+            <h3>🛠 Data & Tools</h3>
+            <p>Excel, Git, GitHub</p>
+        </div>
 
+        <div class="skill-category">
+            <h3>🎨 Digital Skills</h3>
+            <p>Digital Marketing Fundamentals, Canva</p>
+        </div>
+
+        <div class="skill-category">
+            <h3>⚙️ Other Technologies</h3>
+            <p>IoT, Application Development, Hardware-Software Integration</p>
+        </div>
+
+    </div>
+
+</div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
+<div class="container">
 
-  <h2 class="title">Featured <span>Projects</span></h2>
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Academic Projects</h2>
 
-  <p class="subtitle">Projects and ideas I have worked on</p>
+    <div class="projects-grid">
 
-  <div class="projects">
+        <div class="project-card">
+            <div class="project-icon">🎓</div>
+            <h3>Student Management System</h3>
+            <p>
+                Developed a student management application for storing
+                and managing student records efficiently.
+            </p>
 
-    <div class="project">
-      <h3>🩸 LifeLink</h3>
-      <p>
-        A smart blood finder platform designed to connect blood donors
-        and people who need blood quickly.
-      </p>
+            <div class="tech">
+                <span>Java</span>
+                <span>MySQL</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon">🌐</div>
+            <h3>Portfolio Website</h3>
+            <p>
+                Designed and developed a responsive personal portfolio
+                website to showcase my skills and academic projects.
+            </p>
+
+            <div class="tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </div>
+
     </div>
 
-    <div class="project">
-      <h3>🤖 CareerPilot AI</h3>
-      <p>
-        A smart interview and placement preparation platform with
-        aptitude, coding and HR interview practice.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>🤟 Sign Language Recognition</h3>
-      <p>
-        A technology project focused on recognizing sign language
-        using computer vision concepts.
-      </p>
-    </div>
-
-  </div>
-
+</div>
 </section>
 
-<!-- CONTACT -->
+<section id="education">
+<div class="container">
+
+    <div class="section-label">Education</div>
+    <h2 class="section-title">My Academic Journey</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>B.E. Computer Science and Engineering</h3>
+            <p>SSM College of Engineering</p>
+            <p>Expected Graduation: 2027 • CGPA: 8.0 / 10</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Higher Secondary Education (HSC)</h3>
+            <p>Government Model Girls Higher Secondary School, Komarapalayam</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<section id="achievements">
+<div class="container">
+
+    <div class="section-label">Experience & Achievements</div>
+    <h2 class="section-title">Learning Beyond the Classroom</h2>
+
+    <div class="achievement-grid">
+
+        <div class="achievement">
+            <div class="emoji">💼</div>
+            <h4>Full Stack Development Internship</h4>
+            <p>Techvolt Software Pvt. Ltd., Coimbatore • 25 Days</p>
+        </div>
+
+        <div class="achievement">
+            <div class="emoji">🏆</div>
+            <h4>Full Stack Development</h4>
+            <p>Completed internship certification.</p>
+        </div>
+
+        <div class="achievement">
+            <div class="emoji">📊</div>
+            <h4>Data Analytics</h4>
+            <p>Completed Data Analytics certification.</p>
+        </div>
+
+        <div class="achievement">
+            <div class="emoji">🐍</div>
+            <h4>Python Training</h4>
+            <p>Successfully completed Python training.</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
 <section id="contact">
+<div class="container">
 
-  <h2 class="title">Contact <span>Me</span></h2>
+    <div class="section-label">Contact</div>
 
-  <p class="subtitle">Let's connect and build something amazing!</p>
+    <div class="contact-box">
 
-  <div class="contact">
+        <h2>Let's Connect</h2>
+        <p>Feel free to reach out for opportunities and professional connections.</p>
 
-    <div class="contact-grid">
+        <div class="contact-grid">
 
-      <div class="contact-card">
-        <h4>📧 Email</h4>
-        <a href="mailto:nendharacse@gmail.com">
-          nendharacse@gmail.com
-        </a>
-      </div>
+            <div class="contact-item">
+                <strong>📧 EMAIL</strong>
+                <a href="mailto:nendharacse@gmail.com">
+                    nendharacse@gmail.com
+                </a>
+            </div>
 
-      <div class="contact-card">
-        <h4>📱 Phone</h4>
-        <a href="tel:9363090015">
-          +91 9363090015
-        </a>
-      </div>
+            <div class="contact-item">
+                <strong>📱 PHONE</strong>
+                <a href="tel:+919363090015">
+                    +91 9363090015
+                </a>
+            </div>
 
-      <div class="contact-card">
-        <h4>💼 LinkedIn</h4>
-        <a href="https://www.linkedin.com/in/nendhara-kumar-96792a2a4"
-           target="_blank">
-          Connect on LinkedIn
-        </a>
-      </div>
+            <div class="contact-item">
+                <strong>💼 LINKEDIN</strong>
+                <a href="https://www.linkedin.com/in/nendhara-kumar-96792a2a4"
+                   target="_blank">
+                    View LinkedIn Profile
+                </a>
+            </div>
 
-      <div class="contact-card">
-        <h4>🐙 GitHub</h4>
-        <a href="https://github.com/nendhara"
-           target="_blank">
-          github.com/nendhara
-        </a>
-      </div>
+            <div class="contact-item">
+                <strong>🐙 GITHUB</strong>
+                <a href="https://github.com/nendhara"
+                   target="_blank">
+                    github.com/nendhara
+                </a>
+            </div>
+
+        </div>
+
+        <div class="social-links">
+            <a href="mailto:nendharacse@gmail.com" class="btn btn-primary">
+                Send Email
+            </a>
+
+            <a href="https://www.linkedin.com/in/nendhara-kumar-96792a2a4"
+               target="_blank"
+               class="btn btn-outline"
+               style="color:white;border-color:#64748b;">
+               LinkedIn
+            </a>
+
+            <a href="https://github.com/nendhara"
+               target="_blank"
+               class="btn btn-outline"
+               style="color:white;border-color:#64748b;">
+               GitHub
+            </a>
+        </div>
 
     </div>
 
-    <div class="social-buttons">
-
-      <a href="mailto:nendharacse@gmail.com" class="btn primary">
-        Send Email ✉️
-      </a>
-
-      <a href="https://www.linkedin.com/in/nendhara-kumar-96792a2a4"
-         target="_blank"
-         class="btn secondary">
-        LinkedIn 💼
-      </a>
-
-      <a href="https://github.com/nendhara"
-         target="_blank"
-         class="btn secondary">
-        GitHub 🐙
-      </a>
-
-    </div>
-
-  </div>
-
+</div>
 </section>
 
 <footer>
-  © 2026 Nendhara Kumar | Portfolio
+    © 2026 Nendhara K • Personal Portfolio
 </footer>
 
 </body>
-      </html>
+  </html>
