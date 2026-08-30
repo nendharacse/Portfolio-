@@ -1402,5 +1402,31 @@ body {
     .info-card {
         width: 100%;
     }
+   .profile-photo {
+    width: 260px;
+    height: 320px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 30px;
+
+    position: relative;
+    z-index: 2;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 25px 60px rgba(124, 58, 237, 0.35);
+
+    transition: 0.4s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.03) rotate(1deg);
+
+    box-shadow:
+        0 35px 80px rgba(236, 72, 153, 0.3);
+}
 
 }
